@@ -11,9 +11,9 @@ Extracted from plinth, initial release ready to push to GitHub.
 
 ## Active Tasks
 
-- [ ] Create GitHub repo at github.com/pborenstein/handoff
-- [ ] Push initial commit
-- [ ] Remove skills from plinth and update plinth's README and CLAUDE.md
+- [x] Create GitHub repo at github.com/pborenstein/handoff
+- [x] Push initial commit
+- [x] Remove skills from plinth and update plinth's README and CLAUDE.md
 
 ## Blockers
 
@@ -21,10 +21,10 @@ None
 
 ## Context
 
-- Extracted from plinth — the three skills (project-tracking, session-pickup, session-wrapup) are self-contained
-- All legacy/backward-compat references removed; this is the first version
-- plinth's python-project-init skill references `plinth:project-tracking` and needs updating to `handoff:project-tracking`
+- Published at https://github.com/pborenstein/handoff
+- Skills were already removed from plinth before this session; plinth already referenced `handoff:` correctly
+- Three skills: project-tracking, session-pickup, session-wrapup
 
 ## Next Session
 
-Create the GitHub repo, push, then remove the skills from plinth and update its references.
+Project is live. Consider next steps: versioning, additional skills, or documentation improvements.
