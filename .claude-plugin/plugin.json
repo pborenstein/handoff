@@ -1,0 +1,12 @@
+{
+  "name": "handoff",
+  "description": "Token-efficient project tracking with session pickup/wrapup",
+  "version": "1.0.0",
+  "author": {
+    "name": "Philip Borenstein",
+    "url": "https://github.com/pborenstein"
+  },
+  "repository": "https://github.com/pborenstein/handoff",
+  "homepage": "https://github.com/pborenstein/handoff",
+  "keywords": ["project-tracking", "session-management", "documentation"]
+}
