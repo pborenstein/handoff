@@ -22,8 +22,9 @@ Stand up the handoff plugin as a standalone, independently installable Claude Co
 - [x] Write README.md
 - [x] Write CHANGELOG.md
 - [x] Bootstrap docs/ with project-tracking system
-- [ ] Create GitHub repo
-- [ ] Initial commit and push
+- [x] Create GitHub repo
+- [x] Initial commit and push
+- [x] Fix session-wrapup to use Grep tool instead of bash grep
 
 ## Future Phases
 
