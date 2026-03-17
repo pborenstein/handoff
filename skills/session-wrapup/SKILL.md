@@ -1,7 +1,7 @@
 ---
 name: session-wrapup
 description: Update project documentation and commit changes after a work session
-allowed-tools: Read, Write, Bash, Glob, AskUserQuestion
+allowed-tools: Read, Write, Bash, Glob, Grep, AskUserQuestion
 ---
 
 # Session Wrap-up
@@ -52,9 +52,7 @@ NOTE: Some of these tasks may have been completed already.
 **File**: `docs/chronicles/phase-N-name.md`
 
 - **Determine next entry number** by scanning all chronicle files:
-  ```bash
-  grep -h "^## Entry [0-9]" docs/chronicles/*.md 2>/dev/null | sed 's/## Entry \([0-9]*\).*/\1/' | sort -n | tail -1
-  ```
+  Use the Grep tool with pattern `^## Entry [0-9]` across `docs/chronicles/*.md`, extract the numbers, find the highest, and add 1.
   Use that number + 1 for the new entry (or 1 if no entries exist).
 
 - Use **slim template** (15-20 lines):
