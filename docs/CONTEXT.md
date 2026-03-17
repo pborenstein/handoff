@@ -2,12 +2,12 @@
 phase: 1
 phase_name: Initial Release
 updated: 2026-03-17
-last_commit: b92a670
+last_commit: b7b71db
 ---
 
 ## Current Focus
 
-Phase 1 complete. Fixing session-wrapup skill to use Grep tool instead of bash grep.
+Phase 1 complete. Minor README improvement: added `--plugin-dir` as first installation option.
 
 ## Active Tasks
 
@@ -15,6 +15,7 @@ Phase 1 complete. Fixing session-wrapup skill to use Grep tool instead of bash g
 - [x] Push initial commit
 - [x] Remove skills from plinth and update plinth's README and CLAUDE.md
 - [x] Fix session-wrapup to use Grep tool instead of bash grep
+- [x] Document --plugin-dir installation option in README
 
 ## Blockers
 
@@ -24,7 +25,7 @@ None
 
 - Published at https://github.com/pborenstein/handoff
 - Three skills: project-tracking, session-pickup, session-wrapup
-- session-wrapup was using bash grep; fixed to use Grep tool per Claude Code conventions
+- README now shows three install methods: --plugin-dir, clone to ~/.claude/plugins, settings.json
 - All Phase 1 tasks complete
 
 ## Next Session

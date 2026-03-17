@@ -10,7 +10,13 @@ A Claude Code plugin for token-efficient project tracking across sessions.
 
 ## Installation
 
-Clone the repository and add it to your Claude Code plugins:
+If you've cloned the repository to a directory of your choice, run Claude Code with `--plugin-dir` pointing to it:
+
+```bash
+claude --plugin-dir /path/to/handoff/
+```
+
+Or clone the repository to a standard location and add it to your Claude Code plugins:
 
 ```bash
 git clone https://github.com/pborenstein/handoff.git ~/.claude/plugins/handoff
