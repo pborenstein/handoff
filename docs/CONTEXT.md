@@ -1,21 +1,19 @@
 ---
-phase: 2
-phase_name: New Skills
+phase: 3
+phase_name: Plinth Cleanup
 updated: 2026-04-11
-last_commit: 2cbad82
+last_commit: 8cf7b3f
 ---
 
 ## Current Focus
 
-Added `project-repo` skill for initializing meta-repos that coordinate collections of related projects. Updated README and plugin.json to include it.
+All three phases complete. Plinth cleanup was already done; docs now reflect that.
 
 ## Active Tasks
 
-- [x] Create `skills/project-repo/SKILL.md`
-- [x] Test against `/Users/philip/projects/nahuatl-PROJECTS`
-- [x] Update README with skill description and usage section
-- [x] Update plugin.json description and keywords
-- [x] Update CONTEXT.md
+- [x] Add project-repo skill
+- [x] Update README and plugin.json
+- [x] Mark plinth cleanup complete in docs
 
 ## Blockers
 
@@ -23,10 +21,9 @@ None
 
 ## Context
 
-- Four skills now: project-tracking, project-repo, session-pickup, session-wrapup
-- `project-repo` handles multi-project collections; gitignores member dirs, creates shared CLAUDE.md and docs/ structure
-- Tested against nahuatl-PROJECTS (5 member projects), commit bd5b3de
-- SKILL.md references project-tracking assets for doc templates
+- Four skills: project-tracking, project-repo, session-pickup, session-wrapup
+- Plinth no longer contains any of the tracking skills
+- All phases 1-3 complete
 
 ## Next Session
 
