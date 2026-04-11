@@ -1,6 +1,6 @@
 {
   "name": "handoff",
-  "description": "Token-efficient project tracking with session pickup/wrapup",
+  "description": "Token-efficient project tracking with session pickup/wrapup and multi-project meta-repo support",
   "version": "1.0.0",
   "author": {
     "name": "Philip Borenstein",
@@ -8,5 +8,5 @@
   },
   "repository": "https://github.com/pborenstein/handoff",
   "homepage": "https://github.com/pborenstein/handoff",
-  "keywords": ["project-tracking", "session-management", "documentation"]
+  "keywords": ["project-tracking", "session-management", "documentation", "meta-repo", "multi-project"]
 }

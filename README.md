@@ -5,6 +5,7 @@ A Claude Code plugin for token-efficient project tracking across sessions.
 ## Skills Included
 
 - `handoff:project-tracking` - Establish the documentation structure for tracking project progress
+- `handoff:project-repo` - Initialize a meta-repo coordinating multiple related projects, each with its own independent git history
 - `handoff:session-pickup` - Read context from the previous session to prepare for new work
 - `handoff:session-wrapup` - Update project documentation and commit changes after a session
 
@@ -44,6 +45,22 @@ Creates the documentation structure:
 - `docs/IMPLEMENTATION.md` - Living todo list for current phase (400-600 lines)
 - `docs/DECISIONS.md` - Registry of architectural decisions (heading-based, grep-friendly)
 - `docs/chronicles/phase-X.md` - Session-by-session implementation notes
+
+### Set up tracking for a collection of related projects
+
+```
+/handoff:project-repo
+```
+
+For directories that contain multiple related projects, each with its own independent git history. Creates a meta-repo at the parent level that tracks shared documentation and conventions without coupling the individual repos (no submodules, no monorepo merge).
+
+The meta-repo:
+
+- gitignores all member subdirectories
+- creates `CLAUDE.md` describing the collection and its members
+- creates the same `docs/` tracking structure as `project-tracking`
+
+Once initialized, use `session-pickup` and `session-wrapup` normally.
 
 ### Start a work session
 

@@ -1,21 +1,21 @@
 ---
-phase: 1
-phase_name: Initial Release
-updated: 2026-03-17
-last_commit: b7b71db
+phase: 2
+phase_name: New Skills
+updated: 2026-04-11
+last_commit: 1ed5068
 ---
 
 ## Current Focus
 
-Phase 1 complete. Minor README improvement: added `--plugin-dir` as first installation option.
+Added `project-repo` skill for initializing meta-repos that coordinate collections of related projects. Updated README and plugin.json to include it.
 
 ## Active Tasks
 
-- [x] Create GitHub repo at github.com/pborenstein/handoff
-- [x] Push initial commit
-- [x] Remove skills from plinth and update plinth's README and CLAUDE.md
-- [x] Fix session-wrapup to use Grep tool instead of bash grep
-- [x] Document --plugin-dir installation option in README
+- [x] Create `skills/project-repo/SKILL.md`
+- [x] Test against `/Users/philip/projects/nahuatl-PROJECTS`
+- [x] Update README with skill description and usage section
+- [x] Update plugin.json description and keywords
+- [x] Update CONTEXT.md
 
 ## Blockers
 
@@ -23,11 +23,11 @@ None
 
 ## Context
 
-- Published at https://github.com/pborenstein/handoff
-- Three skills: project-tracking, session-pickup, session-wrapup
-- README now shows three install methods: --plugin-dir, clone to ~/.claude/plugins, settings.json
-- All Phase 1 tasks complete
+- Four skills now: project-tracking, project-repo, session-pickup, session-wrapup
+- `project-repo` handles multi-project collections; gitignores member dirs, creates shared CLAUDE.md and docs/ structure
+- Tested against nahuatl-PROJECTS (5 member projects), commit bd5b3de
+- SKILL.md references project-tracking assets for doc templates
 
 ## Next Session
 
-Phase 1 done. Consider Phase 2 (plinth cleanup) or other improvements.
+Consider: CHANGELOG update for v1.1.0, push to GitHub, tag release.

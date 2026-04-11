@@ -4,16 +4,27 @@
 
 | # | Name | Status | Notes |
 |---|------|--------|-------|
-| 1 | Initial Release | 🔵 Current | Extracted from plinth |
-| 2 | Plinth Cleanup | ⚪ Planned | Remove skills from plinth, update references |
+| 1 | Initial Release | ✅ Complete | Extracted from plinth |
+| 2 | New Skills | 🔵 Current | project-repo skill added |
+| 3 | Plinth Cleanup | ⚪ Planned | Remove skills from plinth, update references |
 
-## Current Phase: Initial Release
+## Current Phase: New Skills
 
 ### Goal
 
-Stand up the handoff plugin as a standalone, independently installable Claude Code plugin.
+Extend the plugin with additional skills as patterns emerge from real use.
 
 ### Tasks
+
+- [x] Add `project-repo` skill for multi-project meta-repo initialization
+- [x] Test project-repo against nahuatl-PROJECTS (5 member projects)
+- [x] Update README with project-repo description and usage section
+- [x] Update plugin.json description and keywords
+- [x] Move FOODLYGOODLY.md session notes to docs/archives/
+
+## Completed Phases
+
+### Phase 1: Initial Release
 
 - [x] Create repo directory and git init
 - [x] Scaffold plugin structure
@@ -28,7 +39,7 @@ Stand up the handoff plugin as a standalone, independently installable Claude Co
 
 ## Future Phases
 
-### Phase 2: Plinth Cleanup
+### Phase 3: Plinth Cleanup
 
 - Remove skills/project-tracking/ from plinth
 - Remove skills/session-pickup/ from plinth
