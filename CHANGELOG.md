@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-06-21
+
+### Added
+
+- `session-pickup` and `session-wrapup` now guard against running in an uninitialized directory: if neither `docs/CONTEXT.md` nor `docs/IMPLEMENTATION.md` exists, they report that no tracking system is present and stop, rather than improvising an empty plan or scattering `docs/` files ([6373f66](https://github.com/pborenstein/handoff/commit/6373f66))
+
+### Changed
+
+- `PROJECT-TRACKING-REFERENCE.md` synced with v1.1.0 skills: documents the session-pickup checkout-currency check and points to the `project-repo` skill for meta-repos ([e2083b7](https://github.com/pborenstein/handoff/commit/e2083b7))
+
 ## [1.1.0] - 2026-06-21
 
 ### Added
@@ -32,6 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Use Grep tool instead of bash grep in session-wrapup to avoid permission prompts
 
-[Unreleased]: https://github.com/pborenstein/handoff/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/pborenstein/handoff/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/pborenstein/handoff/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/pborenstein/handoff/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/pborenstein/handoff/releases/tag/v1.0.0
