@@ -15,3 +15,13 @@
 **Why**: Tracking-file frontmatter (updated/last_entry) is self-reported and can look fresh while the checkout is actually behind, since tracking files sometimes land via out-of-band pushes (including other projects' sessions).
 
 **Files**: `skills/session-pickup/SKILL.md` (commit f56150c)
+
+## Entry 6: Guard pickup/wrapup against uninitialized projects (2026-06-21)
+
+**What**: Added an early guard to both session-pickup and session-wrapup — if neither `docs/CONTEXT.md` nor `docs/IMPLEMENTATION.md` exists, report that no tracking system is present (suggest project-tracking / project-repo) and stop.
+
+**Why**: Both skills assumed a tracking system was already in place. In an uninitialized directory, pickup would improvise an empty plan and wrapup would scatter `docs/` files into a directory that was never set up.
+
+**How**: pickup gets a new step 1 (remaining steps renumbered); wrapup gets a new step 0 before any file updates.
+
+**Files**: `skills/session-pickup/SKILL.md`, `skills/session-wrapup/SKILL.md` (commit 6373f66). Released v1.1.0 (project-repo + currency check) earlier this session; reference docs synced in e2083b7.
