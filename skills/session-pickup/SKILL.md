@@ -10,11 +10,27 @@ Read context from previous session to prepare for new work.
 
 ## Tasks to complete:
 
-1. **Check for CONTEXT.md first** (token-efficient system):
+0. **Verify the checkout is current** (do this BEFORE reading any tracking file):
+   - If this is a git repo, run `git fetch`, then compare local HEAD to upstream:
+     `git rev-list --left-right --count @{upstream}...HEAD` (left = behind, right = ahead)
+   - **Behind** (left > 0): the tracking files may describe commits this checkout
+     does not have. Warn the user, recommend reconciling, and offer to
+     `git pull --rebase`. Do NOT trust CONTEXT.md's contents until reconciled.
+   - **Diverged** (both > 0): local and remote have both moved. Warn the user,
+     recommend reconciling (rebase is usually right), and offer to do it. Do not
+     plan new work on top of a diverged tip.
+   - Let the user decide; do not auto-reconcile without confirmation.
+   - Rationale: CONTEXT.md's `updated`/`last_entry` are self-reported and can
+     look fresh while the checkout is behind. Tracking files sometimes land via
+     out-of-band pushes (including other projects' sessions), so a recent
+     frontmatter date is NOT proof the local checkout is current.
+
+1. **Check for CONTEXT.md** (token-efficient system):
    - Try to read `docs/CONTEXT.md`
    - If it exists:
      - Check the `updated` date in frontmatter
-     - If older than 7 days, warn user it may be stale
+     - If older than 7 days, warn user it may be stale (in addition to the git
+       check in step 0)
      - Read the entire file (~30-50 lines)
      - Summarize current focus, active tasks, and blockers
      - Report ready to work based on "Next Session" section
