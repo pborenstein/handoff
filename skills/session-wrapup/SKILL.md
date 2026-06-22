@@ -20,6 +20,15 @@ This command supports the **token-efficient documentation system**:
 
 NOTE: Some of these tasks may have been completed already.
 
+### 0. Confirm a tracking system is present (before any updates)
+
+Check whether `docs/CONTEXT.md` or `docs/IMPLEMENTATION.md` exists. If NEITHER
+exists, this project is not set up for project-tracking. Do not create `docs/`
+files from scratch as part of a wrap-up — that scatters tracking files into a
+directory that was never initialized. Instead, report that no tracking system is
+present and suggest running the `project-tracking` skill to initialize one (or
+`project-repo` for a meta-repo coordinating several projects). Then stop.
+
 ### 1. Update CONTEXT.md (Required)
 
 **File**: `docs/CONTEXT.md`

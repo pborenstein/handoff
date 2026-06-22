@@ -25,7 +25,14 @@ Read context from previous session to prepare for new work.
      out-of-band pushes (including other projects' sessions), so a recent
      frontmatter date is NOT proof the local checkout is current.
 
-1. **Check for CONTEXT.md** (token-efficient system):
+1. **Confirm a tracking system is present** (before doing pickup work):
+   - Check whether `docs/CONTEXT.md` or `docs/IMPLEMENTATION.md` exists.
+   - If NEITHER exists, this project is not set up for project-tracking. Do not
+     improvise context or fabricate a plan. Report that no tracking system is
+     present and suggest running the `project-tracking` skill to initialize one
+     (or `project-repo` for a meta-repo coordinating several projects). Then stop.
+
+2. **Check for CONTEXT.md** (token-efficient system):
    - Try to read `docs/CONTEXT.md`
    - If it exists:
      - Check the `updated` date in frontmatter
@@ -36,7 +43,7 @@ Read context from previous session to prepare for new work.
      - Report ready to work based on "Next Session" section
      - DONE - no need to read other files unless context is unclear
 
-2. **Fall back to IMPLEMENTATION.md** (if CONTEXT.md missing):
+3. **Fall back to IMPLEMENTATION.md** (if CONTEXT.md missing):
    - Use Grep to search for "🔵" to find the current phase line number
    - Use Read with offset/limit to read ~200-300 lines starting from that marker
    - Understand from that section:
@@ -45,7 +52,7 @@ Read context from previous session to prepare for new work.
      - Any notes about what to work on next
    - DO NOT read the entire IMPLEMENTATION.md file
 
-3. Make a plan for what to do next based on the context
+4. Make a plan for what to do next based on the context
 
 Note: CHRONICLES.md and DECISIONS.md are historical context. Only read them if
 you need deeper background on a specific decision or past work.
