@@ -306,6 +306,28 @@ A longer `chronicle-entry-full.md` template is available for complex sessions.
 
 **Goal**: Start working in < 2 minutes
 
+#### Step 0: Verify the checkout is current (before reading any tracking file)
+
+If this is a git repo, confirm the local checkout is up to date before trusting
+CONTEXT.md:
+
+```bash
+git fetch
+git rev-list --left-right --count @{upstream}...HEAD   # left = behind, right = ahead
+```
+
+- **Behind** (left > 0): tracking files may describe commits this checkout
+  doesn't have. Warn the user, recommend reconciling, and offer `git pull --rebase`.
+  Do NOT trust CONTEXT.md's contents until reconciled.
+- **Diverged** (both > 0): warn the user and reconcile (rebase is usually right)
+  before planning new work on the diverged tip.
+- Let the user decide; never auto-reconcile without confirmation.
+
+**Why**: CONTEXT.md's `updated`/`last_commit` are self-reported and can look
+fresh while the checkout is behind. Tracking files sometimes land via out-of-band
+pushes (including other projects' sessions), so a recent frontmatter date is NOT
+proof the local checkout is current.
+
 #### Step 1: Read CONTEXT.md (30-50 lines)
 
 ```bash
@@ -499,6 +521,14 @@ Chronicles are cold storage, rarely read during pickup. Write-fast is better tha
 ### Why heading-based DECISIONS.md?
 
 Each decision gets a heading with full details — grep-friendly, single source of truth, room for context and consequences. Chronicle entries just reference "See DEC-XXX".
+
+### What about a collection of related projects?
+
+This guide covers tracking within a single project. If you're coordinating
+several projects that each have their own independent git history, use the
+`project-repo` skill to initialize a meta-repo that tracks shared conventions
+and coordination across them. Each member project still uses the documentation
+system described here on its own.
 
 ### What if my project doesn't have phases?
 
