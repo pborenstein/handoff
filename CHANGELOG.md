@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-10-15
+
 ### Added
 
 - `scannable-docs` skill: formatting rules for technical and reference writing, adapted from the [Technical Documentation Principles](https://gist.github.com/pborenstein/80b6e1a9011b4a02ad13dfbc06874141) gist, with before/after pairs in `references/examples.md`
@@ -15,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - session-wrapup: next chronicle entry number is the max across all chronicle files, and duplicate numbers must be fixed before appending
+- README restyled with scannable-docs; now documents pickup's upstream currency check, the uninitialized-project guard, and scannable-docs usage
 
 ## [1.2.0] - 2026-06-21
 
@@ -51,7 +54,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Use Grep tool instead of bash grep in session-wrapup to avoid permission prompts
 
-[Unreleased]: https://github.com/pborenstein/handoff/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/pborenstein/handoff/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/pborenstein/handoff/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/pborenstein/handoff/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/pborenstein/handoff/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/pborenstein/handoff/releases/tag/v1.0.0
