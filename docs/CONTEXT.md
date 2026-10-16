@@ -2,7 +2,7 @@
 phase: 4
 phase_name: Writing Skills
 updated: 2026-10-15
-last_commit: 1eefa9d
+last_commit: 1b2734a
 ---
 
 ## Current Focus
@@ -14,7 +14,7 @@ Added the `scannable-docs` skill (formatting rules for technical/reference writi
 - [x] Release v1.2.0 (uninitialized-project guard)
 - [x] Add `scannable-docs` skill with examples and `scannable_check.py`
 - [x] session-wrapup: compute next chronicle entry as true max, check for duplicate numbers
-- [ ] Release v1.3.0 (scannable-docs + numbering fix are unreleased)
+- [x] Release v1.3.0
 - [x] Restyle README with scannable-docs (checker clean)
 
 ## Blockers
@@ -30,4 +30,4 @@ None
 
 ## Next Session
 
-Run releaserator for v1.3.0.
+Nothing pending. v1.3.0 released; next work is open.

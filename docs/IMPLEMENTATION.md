@@ -17,7 +17,7 @@
 - [x] Add `scripts/scannable_check.py` report-only checker
 - [x] Update README and CHANGELOG
 - [x] session-wrapup: max-based chronicle numbering with duplicate check
-- [ ] Release v1.3.0
+- [x] Release v1.3.0
 - [x] Restyle README with scannable-docs (checker clean)
 
 ## Completed Phases
