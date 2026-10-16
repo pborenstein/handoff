@@ -18,7 +18,7 @@
 - [x] Update README and CHANGELOG
 - [x] session-wrapup: max-based chronicle numbering with duplicate check
 - [ ] Release v1.3.0
-- [ ] Restyle README docs/ file list to pass the checker (optional)
+- [x] Restyle README with scannable-docs (checker clean)
 
 ## Completed Phases
 
