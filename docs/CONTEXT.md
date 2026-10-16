@@ -1,19 +1,21 @@
 ---
-phase: 3
-phase_name: Plinth Cleanup
-updated: 2026-06-21
-last_commit: 6373f66
+phase: 4
+phase_name: Writing Skills
+updated: 2026-10-15
+last_commit: 1eefa9d
 ---
 
 ## Current Focus
 
-Released v1.1.0. Hardened pickup/wrapup: both now guard against running in directories with no tracking system.
+Added the `scannable-docs` skill (formatting rules for technical/reference writing plus a report-only checker script) and hardened wrapup's chronicle entry numbering.
 
 ## Active Tasks
 
-- [x] Release v1.1.0 (project-repo + session-pickup currency check)
-- [x] Sync PROJECT-TRACKING-REFERENCE with v1.1.0 skills
-- [x] Guard pickup/wrapup against uninitialized projects
+- [x] Release v1.2.0 (uninitialized-project guard)
+- [x] Add `scannable-docs` skill with examples and `scannable_check.py`
+- [x] session-wrapup: compute next chronicle entry as true max, check for duplicate numbers
+- [ ] Release v1.3.0 (scannable-docs + numbering fix are unreleased)
+- [ ] Decide whether to fix the README's own bold-label bullets flagged by the checker
 
 ## Blockers
 
@@ -21,11 +23,11 @@ None
 
 ## Context
 
-- Four skills: project-tracking, project-repo, session-pickup, session-wrapup
-- session-pickup does a git fetch + HEAD/upstream check before trusting CONTEXT.md
-- pickup and wrapup both bail out early if neither docs/CONTEXT.md nor docs/IMPLEMENTATION.md exists, pointing the user at project-tracking/project-repo
-- v1.1.0 released; the guard feat is unreleased and pending the next bump
+- Five skills: project-tracking, project-repo, session-pickup, session-wrapup, scannable-docs
+- scannable-docs is adapted from the Technical Documentation Principles gist; checker is report-only, exit 1 when it finds problems
+- Running the checker on README.md flags 4 bold-label bullets (lines 92-95, the docs/ file list)
+- Wrapup numbering now uses a grep/sort pipeline and refuses to append on top of duplicate entry numbers
 
 ## Next Session
 
-Run releaserator for v1.2.0 (the guard feat + reference docs are unreleased).
+Run releaserator for v1.3.0; optionally restyle the README file list to pass scannable_check.py first.

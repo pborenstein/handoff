@@ -7,6 +7,18 @@
 | 1 | Initial Release | ✅ Complete | Extracted from plinth |
 | 2 | New Skills | ✅ Complete | project-repo skill added |
 | 3 | Plinth Cleanup | ✅ Complete | Skills already removed from plinth |
+| 4 | Writing Skills | In progress | scannable-docs skill |
+
+## Current Phase
+
+### Phase 4: Writing Skills
+
+- [x] Add `scannable-docs` skill (SKILL.md, references/examples.md)
+- [x] Add `scripts/scannable_check.py` report-only checker
+- [x] Update README and CHANGELOG
+- [x] session-wrapup: max-based chronicle numbering with duplicate check
+- [ ] Release v1.3.0
+- [ ] Restyle README docs/ file list to pass the checker (optional)
 
 ## Completed Phases
 

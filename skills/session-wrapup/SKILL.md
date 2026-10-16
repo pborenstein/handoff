@@ -60,9 +60,15 @@ present and suggest running the `project-tracking` skill to initialize one (or
 
 **File**: `docs/chronicles/phase-N-name.md`
 
-- **Determine next entry number** by scanning all chronicle files:
-  Use the Grep tool with pattern `^## Entry [0-9]` across `docs/chronicles/*.md`, extract the numbers, find the highest, and add 1.
-  Use that number + 1 for the new entry (or 1 if no entries exist).
+- **Determine next entry number** by extracting every entry number across
+  all chronicle files and taking the max — never eyeball the last few
+  lines, entries can be out of physical order within a file:
+  `grep -hoE "^## Entry [0-9]+" docs/chronicles/*.md | grep -oE "[0-9]+" | sort -n | tail -1`
+  Use max + 1 for the new entry (or 1 if no entries exist).
+- **Check for duplicate numbers first** (same pipeline, `tail -1` swapped
+  for `uniq -d`): if any number appears more than once, fix the chronicle
+  numbering before adding a new entry — appending on top of a duplicate
+  compounds it.
 
 - Use **slim template** (15-20 lines):
   - Entry number, title, date

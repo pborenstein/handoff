@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `scannable-docs` skill: formatting rules for technical and reference writing, adapted from the [Technical Documentation Principles](https://gist.github.com/pborenstein/80b6e1a9011b4a02ad13dfbc06874141) gist, with before/after pairs in `references/examples.md`
+- `scannable-docs/scripts/scannable_check.py`: report-only checker for bold-label bullets, pseudo-headings, non-left-aligned tables, skipped heading levels, lists without a blank line, emoji, and banned jargon
+
+### Changed
+
+- session-wrapup: next chronicle entry number is the max across all chronicle files, and duplicate numbers must be fixed before appending
+
 ## [1.2.0] - 2026-06-21
 
 ### Added

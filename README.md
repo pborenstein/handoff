@@ -8,6 +8,7 @@ A Claude Code plugin for token-efficient project tracking across sessions.
 - `handoff:project-repo` - Initialize a meta-repo coordinating multiple related projects, each with its own independent git history
 - `handoff:session-pickup` - Read context from the previous session to prepare for new work
 - `handoff:session-wrapup` - Update project documentation and commit changes after a session
+- `handoff:scannable-docs` - Format specs, schemas, READMEs, and reference notes for scanning: tables for data, bullets for items, short paragraphs, top-down diagrams; includes a checker script
 
 ## Installation
 
